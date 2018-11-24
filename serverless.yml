@@ -1,0 +1,24 @@
+service:
+  name: react-minimal-ssr-lambda
+
+plugins:
+  - serverless-offline
+
+provider:
+  name: aws
+  runtime: nodejs8.10
+
+functions:
+  ssr-minimal-renderer:
+    handler: handler.render
+    memorySize: 512
+    timeout: 30
+    events:
+      - http:
+          path: /
+          method: ANY
+          cors: true
+      - http:
+          path: /{proxy+}
+          method: ANY
+          cors: true

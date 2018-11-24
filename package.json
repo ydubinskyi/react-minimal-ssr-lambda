@@ -1,0 +1,31 @@
+{
+  "name": "react-minimal-ssr-lambda",
+  "version": "1.0.0",
+  "description": "Serverless webpack example using ecma script",
+  "scripts": {
+    "lambda": "sls offline --port 8000 start",
+    "pack": "webpack --config webpack.config.js",
+    "babel": "babel src -d dist",
+    "build": "npm run pack && npm run babel"
+  },
+  "dependencies": {
+    "express": "^4.16.4",
+    "react": "^16.6.3",
+    "react-dom": "^16.6.3",
+    "serverless-http": "^1.8.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.1.5",
+    "@babel/core": "^7.1.6",
+    "@babel/preset-env": "^7.1.6",
+    "@babel/preset-react": "^7.0.0",
+    "babel-loader": "^8.0.4",
+    "serverless-offline": "^3.31.3",
+    "webpack": "^4.26.0",
+    "webpack-cli": "^3.1.2"
+  },
+  "author": "The serverless webpack authors (https://github.com/elastic-coders/serverless-webpack)",
+  "license": "MIT",
+  "main": "first.js",
+  "keywords": []
+}
