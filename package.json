@@ -3,10 +3,11 @@
   "version": "1.0.0",
   "description": "Serverless webpack example using ecma script",
   "scripts": {
-    "lambda": "sls offline --port 8000 start",
     "pack": "webpack --config webpack.config.js",
     "babel": "babel src -d dist",
-    "build": "npm run pack && npm run babel"
+    "build": "npm run pack && npm run babel",
+    "lambda:offline": "sls offline --port 8000 start",
+    "lambda:deploy": "serverless deploy --verbose"
   },
   "dependencies": {
     "express": "^4.16.4",
