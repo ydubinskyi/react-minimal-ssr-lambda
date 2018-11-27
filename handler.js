@@ -9,7 +9,6 @@ const app = express();
 
 app.use('/assets', express.static(path.resolve(__dirname, 'assets')));
 
-// server rendered home page
 app.get('*', (req, res) => {
   const content = ssr();
 
